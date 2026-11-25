@@ -7,6 +7,12 @@ distributed systems, AI agents and more. It also holds **skill-assessment prep**
 competency matrix (for example prompt engineering, Novice → Advanced), and a tutor prepares you
 for one level.
 
+> **Template:** made from
+> [learning-lab-template](https://github.com/LasterBergamot/learning-lab-template)
+> (`.github/template-source`). To start your own, click **Use this template** there. A
+> weekly workflow opens a PR when the template changes. Merge it with a merge commit.
+> Details: [Template](docs/Template.md).
+
 This README is the router: it says what this is and how it works, what you need installed,
 where you stand (the progress graph), and links to every track and page.
 
@@ -114,7 +120,8 @@ flowchart LR
   classDef learning fill:#fde68a,color:#111827,stroke:#b45309
   classDef building fill:#bfdbfe,color:#111827,stroke:#1d4ed8
   classDef done fill:#bbf7d0,color:#111827,stroke:#15803d
-  class foundations,security,identity,jvm,testing,python,concurrency,mobile,containers,virtualization,orchestration,observability,iac,cloud,eventing,data,distributed,architecture,ai,classics todo
+  class foundations,security,identity,jvm,testing,python,concurrency,mobile,containers,virtualization,orchestration,observability,iac,cloud,eventing,data,distributed,architecture,classics todo
+  class ai building
 ```
 <!-- roadmap-sync:end -->
 
@@ -228,6 +235,7 @@ folder looks: [labs/README.md](labs/README.md).
 ## Docs
 
 - [Setup](docs/Setup.md): from a fresh machine to a working setup, on both platforms
+- [Template](docs/Template.md): the template this repo comes from, and how it stays in sync
 - [Platforms](docs/Platforms.md): what differs between Omarchy/Docker and Windows/Podman, and the rules that keep labs portable
 - [Isolation](docs/Isolation.md): isolation tiers T0–T5, resource budget, teardown discipline
 - [How I Learn](docs/How-I-Learn.md): the Socratic method, hint ladder, milestones, the AI skills
@@ -277,7 +285,7 @@ learning-lab/
 ├── README.md              this router
 ├── AGENTS.md              the AI rules for every tool; CLAUDE.md and GEMINI.md import it
 ├── apm.yml, apm.lock.yaml AI skills and agents pinned from ai-common
-├── scripts/               prereqs.sh (both platforms), docs checks
+├── scripts/               prereqs.sh (both platforms), docs checks, template-sync.sh
 ├── .github/               CI on Linux and Windows, issue forms
 ├── .agents/               tool-neutral context files; deployed skills for the agent-skills target
 ├── .claude/               Claude Code extras: settings, output style, path rules, deployed skills

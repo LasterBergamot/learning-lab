@@ -44,7 +44,8 @@ flowchart LR
   classDef learning fill:#fde68a,color:#111827,stroke:#b45309
   classDef building fill:#bfdbfe,color:#111827,stroke:#1d4ed8
   classDef done fill:#bbf7d0,color:#111827,stroke:#15803d
-  class MATH,LLM,PE,SAMP,EMB,RAG,EVAL,AGT,MCP,HARN,LOCAL todo
+  class MATH,LLM,PE,SAMP,EMB,EVAL,AGT,MCP,HARN,LOCAL todo
+  class RAG building
 ```
 <!-- roadmap-sync:end -->
 
@@ -55,7 +56,7 @@ flowchart LR
 | `prompt-engineering`: Prompt engineering | — | todo |
 | `sampling-parameters`: Sampling parameters | — | todo |
 | `vector-search`: Embeddings and vector search | — | todo |
-| `rag`: RAG | — | todo |
+| `rag`: RAG | [rag/](rag/README.md) | building |
 | `evals`: Evals | — | todo |
 | `agents-tool-use`: Agents and tool use | — | todo |
 | `mcp`: Model Context Protocol | — | todo |
@@ -66,7 +67,7 @@ flowchart LR
 
 ## Notes
 
-Prompt engineering is also an [Assessments](../../docs/Assessments.md) subject. The RAG lab can build on the separate `rag-demo` repo, and the guardrails lab can use ai-common's guard hooks as a case study. Local models are limited by 13 GB RAM and no GPU on the VM.
+Prompt engineering is also an [Assessments](../../docs/Assessments.md) subject. The guardrails lab can use ai-common's guard hooks as a case study. Local models are limited by 13 GB RAM and no GPU on the VM.
 
 ## References
 

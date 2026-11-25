@@ -24,6 +24,7 @@ this file says which docs this repo has and the steps specific to it.
 | `README.md` | Router: what, how, prerequisites, progress overview graph, track links, machines |
 | `AGENTS.md` | AI rules and router for any tool |
 | `docs/Setup.md` | Machine setup runbook for Omarchy (Linux/Docker) and Windows 11 (Git Bash/Podman), built on `scripts/prereqs.sh`. The `setup-project` skill follows it |
+| `docs/Template.md` | The template this repo comes from (`.github/template-source`), creating a repo from it, and the sync |
 | `docs/Platforms.md` | The two-platform matrix and the portability rules |
 | `docs/Isolation.md` | Isolation tiers T0–T5, resource and disk budget, teardown rules |
 | `docs/How-I-Learn.md` | The Socratic method used here, the skills, spaced review |
