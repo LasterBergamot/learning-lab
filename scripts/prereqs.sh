@@ -55,6 +55,7 @@ TOOLS=(
   "engine|core||ENGINE|docker docker-compose|RedHat.Podman-Desktop||Linux: Docker (enable the service); Windows: Podman Desktop, machine on the Hyper-V provider (docs/Setup.md)"
   "kind|core||kind|||kind@latest|"
   "kubectl|core||kubectl|||kubectl@latest|"
+  "shellcheck|core||shellcheck|shellcheck|koalaman.shellcheck|shellcheck@latest|lints scripts/*.sh (winget id: verify)"
   "openssl|opt|security,identity|openssl|openssl|||Git Bash already ships openssl"
   "java|opt|jvm,testing,identity,eventing,data|java|||java@temurin-25|"
   "maven|opt|jvm,testing,identity|mvn|||maven@latest|"
@@ -114,10 +115,13 @@ probe() {  # $1 = binary column
         return 0
       done
       return 1 ;;
-    java)    have java    && VER=$(run_ver java -version) && return 0 ;;
-    kubectl) have kubectl && VER=$(run_ver kubectl version --client) && return 0 ;;
-    *)       have "$1"    && VER=$(run_ver "$1" --version) && return 0 ;;
+    java)    have java    && VER=$(run_ver java -version) ;;
+    kubectl) have kubectl && VER=$(run_ver kubectl version --client) ;;
+    *)       have "$1"    && VER=$(run_ver "$1" --version) ;;
   esac
+  # A mise shim with no version set answers "mise ERROR …": that tool is not installed.
+  [[ -n $VER && $VER != mise\ ERROR* ]] && return 0
+  VER=''
   # Installed through mise but mise is not activated in this shell?
   if have mise && mise which "$1" >/dev/null 2>&1; then
     VER="installed via mise, but not on PATH: activate mise in ~/.bashrc"

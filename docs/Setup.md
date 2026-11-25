@@ -57,7 +57,7 @@ bash scripts/prereqs.sh --check
 ```
 
 It checks git, python, gh, jq, curl, mise, uv, the APM CLI, a container engine with compose,
-kind and kubectl.
+kind, kubectl and shellcheck.
 
 **Expected:** a ✓/✗ list and a "Missing" count. Fix the ✗ lines in steps 5–7, then run it again.
 
@@ -71,7 +71,7 @@ bash scripts/prereqs.sh --install
 - **Windows 11** uses `winget install --id … -e` and `mise use -g …`.
 
 Each command is printed first and runs only after a `y`. Install mise before the tools it
-provides (uv, kind, kubectl, …), then open a new shell and activate it:
+provides (uv, kind, kubectl, shellcheck, …), then open a new shell and activate it:
 
 ```bash
 echo 'eval "$(mise activate bash)"' >> ~/.bashrc   # both platforms; Git Bash reads ~/.bashrc too

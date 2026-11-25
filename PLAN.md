@@ -64,7 +64,7 @@ Owner: **AI** or **YOU**. `needs:` lists the items that must be ticked first.
 - [x] **H1** (AI) `apm.yml` targets `claude` + `agent-skills`; packages `#v0.3.0`; `apm install`, `apm audit` clean. needs: F7, G5
 - [x] **H2** (AI) Review everything against this plan; run the G7 checks locally; run `prereqs.sh --check` on Omarchy. needs: G1–G7, H1
 - [x] **H3** (AI, after go-ahead) `git init -b main`, first commit (this PLAN.md included, so the plan travels). needs: H2
-- [ ] **M3** (YOU) `git remote add origin git@github.com:LasterBergamot/learning-lab.git && git push -u origin main`. needs: H3
+- [x] **M3** (AI, on your go-ahead) `git remote add origin git@github.com:LasterBergamot/learning-lab.git && git push -u origin main`. needs: H3
 - [ ] **H4** (AI) On GitHub: CI green on both OSes, the Mermaid graphs render in the READMEs. In a new session started in `learning-lab/`: "write me a FastAPI hello world" gets questions back, and creating `labs/x/main.py` is denied. needs: M3
 - [ ] **M5** (YOU, optional) On Windows 11: clone, `bash scripts/prereqs.sh --check` in Git Bash, report back
 - [ ] **C1–C2** (AI, optional, after go-ahead) GitHub labels, milestone and board. Issues are extras; progress lives in the READMEs
@@ -80,6 +80,8 @@ Owner: **AI** or **YOU**. `needs:` lists the items that must be ticked first.
 | 2026-11-25 | F1–F7 | ai-common PR #5 merged (580731e), tag v0.3.0: .agents/context lookup, neutral wording, prereq-check, Status-line roadmap-sync, sources + checkpoint rules, APM findings in docs/APM.md |
 | 2026-11-25 | G1–G7 | Wiki removed; root README router + 20 track READMEs (identity, testing new); AGENTS.md/CLAUDE.md/GEMINI.md; .agents/context; scripts/prereqs.sh; scripts/check_docs.py; CI matrix ubuntu+windows. shellcheck not run (not installed) |
 | 2026-11-25 | H1–H3 | apm.yml targets claude + agent-skills at v0.3.0: 14 skills in .claude/skills and .agents/skills, 2 agents, audit clean (33 files); check_docs OK; prereqs --check: kind, kubectl missing on Omarchy (expected, install when needed); git init + first commit |
+| 2026-11-25 | M3 | Pushed main (891b758) to origin; first CI run green on ubuntu-latest and windows-latest |
+| 2026-11-25 | shellcheck | Added as a core prerequisite (mise, pacman, winget) and a Linux CI step; prereqs.sh lints clean (0.11.0); unset mise shims now count as missing |
 | 2026-11-25 | Approval | Plan approved; git branches, commits, PRs, merges and the v0.3.0 tag authorised; rule added: online sources go into the relevant README |
 | 2026-11-25 | Re-plan | Wiki dropped, router READMEs, Status lines, prereqs.sh, two new tracks, tool-agnostic APM, prereq-check, commit checkpoints, PLAN.md removed at the end |
 

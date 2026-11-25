@@ -24,7 +24,7 @@ file holds the values. This is a solo learning repo, so the checklist is light.
 1. No lab code written by the AI: the diff's non-Markdown files under `labs/` are the learner's.
 2. No secrets, private keys or state files in the diff (`*.key`, `*.pem`, `*.tfstate*`, `.env`).
 3. `python3 scripts/check_docs.py` passes (links, Status lines, track links).
-4. `bash -n scripts/*.sh` and `jq . .claude/settings.json` succeed.
+4. `bash -n scripts/*.sh`, `shellcheck scripts/*.sh` and `jq . .claude/settings.json` succeed.
 5. Both platforms covered: any script, setup step or lab instruction in the diff works on
    Omarchy (Linux/Docker) and Windows 11 (Git Bash/Podman). CI runs on both.
 
