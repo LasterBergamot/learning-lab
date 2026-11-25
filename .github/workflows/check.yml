@@ -38,6 +38,12 @@ jobs:
             echo "ok: $f"
           done
 
+      - name: Shell lint
+        # ShellCheck output is the same on both platforms, so one run is enough; ubuntu-latest
+        # ships it. Locally: bash scripts/prereqs.sh --install provides it (mise, pacman, winget).
+        if: runner.os == 'Linux'
+        run: shellcheck scripts/*.sh
+
       - name: Prerequisites (CI set)
         run: bash scripts/prereqs.sh --ci
 

@@ -50,7 +50,7 @@ bash scripts/prereqs.sh --install                # installs what is missing, ask
 - **Omarchy (Linux VM):** bash, Docker, mise, uv; packages from pacman.
 - **Windows 11:** Git Bash only (no WSL2 distro), Podman Desktop with the Hyper-V machine
   provider, mise, uv; packages from winget.
-- Both: git, gh, jq, the APM CLI, and the machine setup from
+- Both: git, gh, jq, shellcheck (lints `scripts/*.sh`), the APM CLI, and the machine setup from
   [dev-config](https://github.com/LasterBergamot/dev-config) (status line, deny rules, git
   aliases) plus ai-common's guard hooks.
 
