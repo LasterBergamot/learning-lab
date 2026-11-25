@@ -236,7 +236,6 @@ folder looks: [labs/README.md](labs/README.md).
 - [Review Queue](docs/Review-Queue.md): spaced-repetition questions
 - [Assessments](docs/Assessments.md) and [assessments/README.md](assessments/README.md): skill-evaluation prep and the readiness heatmap
 - [AGENTS.md](AGENTS.md): the rules every AI tool follows here
-- [PLAN.md](PLAN.md): the foundations setup checklist (temporary, deleted when the setup is done)
 
 ## Starting something
 
@@ -277,7 +276,6 @@ the other.
 learning-lab/
 ├── README.md              this router
 ├── AGENTS.md              the AI rules for every tool; CLAUDE.md and GEMINI.md import it
-├── PLAN.md                foundations checklist (temporary)
 ├── apm.yml, apm.lock.yaml AI skills and agents pinned from ai-common
 ├── scripts/               prereqs.sh (both platforms), docs checks
 ├── .github/               CI on Linux and Windows, issue forms

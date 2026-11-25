@@ -14,7 +14,6 @@ this file says which docs this repo has and the steps specific to it.
 - `AGENTS.md` is the router for every AI tool (under 100 lines). `CLAUDE.md` imports it and adds
   the Claude-only extras; `GEMINI.md` imports it. Context files: `.agents/context/`. Claude-only:
   `.claude/rules/`, `.claude/output-styles/socratic.md`, `.claude/settings.json`.
-- `PLAN.md`: the foundations checklist, temporary; deleted once done.
 - `labs/<track>/README.md` (track pages) and `labs/<track>/<lab>/README.md` (lab briefs), each
   with a References section. `assessments/**`.
 
