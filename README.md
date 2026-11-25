@@ -172,7 +172,8 @@ flowchart LR
   classDef learning fill:#fde68a,color:#111827,stroke:#b45309
   classDef building fill:#bfdbfe,color:#111827,stroke:#1d4ed8
   classDef done fill:#bbf7d0,color:#111827,stroke:#15803d
-  class foundations,security,identity,jvm,testing,python,concurrency,mobile,containers,virtualization,orchestration,observability,iac,cloud,eventing,data,distributed,architecture,ai,classics todo
+  class foundations,security,identity,jvm,testing,python,concurrency,mobile,containers,virtualization,orchestration,observability,iac,cloud,eventing,data,distributed,architecture,classics todo
+  class ai building
 ```
 <!-- roadmap-sync:end -->
 
