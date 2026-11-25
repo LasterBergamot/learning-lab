@@ -137,8 +137,9 @@ export KIND_EXPERIMENTAL_PROVIDER=podman
 
 ## 9. Machine setup from dev-config
 
-dev-config installs the Claude Code status line, the `permissions.deny` rules for disk-wiping
-commands, and the git aliases. Clone it next to this repo, then:
+[dev-config](https://github.com/LasterBergamot/dev-config) installs the Claude Code status
+line, the `permissions.deny` rules for disk-wiping commands, and the git aliases. Your own
+dotfiles work just as well. To use dev-config, clone it next to this repo, then:
 
 ```bash
 bash install.sh       # Omarchy
@@ -150,7 +151,7 @@ Pick `claude-statusline`, `claude-settings-statusline`, `claude-settings-deny`, 
 
 **Expected:** `bash install.sh --list` reports these items as `up to date`.
 
-## 10. Guard hooks from ai-common (Claude Code only)
+## 10. Guard hooks from ai-common (Claude Code only, optional)
 
 The guards ask before risky actions: commits, pushes, deletes, secret reads, network uploads,
 writes outside the workspace. They are installed once per machine (user scope):
@@ -163,6 +164,9 @@ cp ~/.claude/hooks/guards/scripts/local.sh.example ~/.claude/hooks/local.sh
 Use the newest ai-common tag. Fill `local.sh` with this machine's protected folders and
 services; ai-common's `docs/USING.md` has the details. Other AI tools have no guard hooks: the
 rules in `AGENTS.md` apply to them.
+
+If you skip this step, `.claude/settings.json` still asks before state-changing git commands
+and denies code edits under `labs/`.
 
 **Expected:** a new Claude Code session lists the active guards at start. Asking it to run
 `git push` makes it ask first, even in auto mode.
