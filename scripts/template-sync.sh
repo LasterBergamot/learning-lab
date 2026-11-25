@@ -68,6 +68,10 @@ if ! git merge-base HEAD "$upstream" >/dev/null; then
   git merge --quiet -s ours --allow-unrelated-histories --no-edit \
     -m "Record the template baseline ($(short "$baseline"))" "$baseline"
   echo "Recorded the template baseline: $(short "$baseline")."
+  if git merge-base --is-ancestor "$upstream" HEAD; then
+    echo "No template changes since then. Push this commit so the next sync starts from it."
+    exit 0
+  fi
 fi
 
 if git merge --no-ff --no-edit -m "Merge template updates ($(short "$upstream"))" "$upstream"; then
