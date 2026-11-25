@@ -30,7 +30,7 @@ holds the values.
 
 ## Milestones
 
-- `Repo foundations`: setting up this repo and its tooling.
+- `Repo foundations` (#1): setting up this repo and its tooling.
 - No milestones for learning. The order is expressed by blocked-by relationships and the
   prerequisite graphs in the root and track READMEs, not by dates.
 
@@ -42,9 +42,9 @@ track's epic.
 
 ## Board
 
-- Project **"learning-lab"** (owner `LasterBergamot`); its number is set when it is created
-  (`gh project list --owner LasterBergamot`). Auto-add is **off**: add each issue with
-  `gh project item-add`.
+- Project **"learning-lab"**, number **8** (owner `LasterBergamot`,
+  https://github.com/users/LasterBergamot/projects/8), linked to the repo. Auto-add is **off**:
+  add each issue with `gh project item-add 8 --owner LasterBergamot --url <issue-url>`.
 - Fields:
   - **Status:** Todo, Learning, Building, Review, Done (new issues: Todo)
   - **Track:** single select, the track ids above
