@@ -9,7 +9,8 @@ file holds the values. This is a solo learning repo, so the checklist is light.
 - **Branch names:** `lab/<track>-<lab>`, `assess/<subject>-<level>`, `docs/<topic>`, `chore/<topic>`.
 - **Protected:** none yet. Direct pushes to `main` are fine for notes; use a PR when a change
   spans several labs or touches `.agents/`, `.claude/`, `scripts/` or `.github/`.
-- **Merge method:** squash. **Commit subjects:** imperative, sentence case, no prefix
+- **Merge method:** squash, except template sync PRs (branch `template-sync`): those use a
+  merge commit (`gh pr merge --merge`), so the next sync knows what is already in. **Commit subjects:** imperative, sentence case, no prefix
   (e.g. "Add the TLS lab brief").
 
 ## Dependabot
