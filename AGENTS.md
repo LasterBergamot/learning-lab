@@ -20,6 +20,7 @@ code**; the learner builds everything.
 | Anything under `labs/` | `labs/_template/README.md` (the lab contract), `docs/Platforms.md`, `docs/Isolation.md` |
 | Anything under `assessments/` | `assessments/README.md` |
 | Setting up a machine | `docs/Setup.md` and `scripts/prereqs.sh` (the `setup-project` skill follows Setup.md) |
+| The template, syncing from it, framework vs. your content | `docs/Template.md` |
 | Docs, READMEs and where pages live | `.agents/context/docs.md` |
 | Filing or editing issues (optional extras) | `.agents/context/issues.md` |
 | Opening a PR | `.agents/context/pr-checklist.md` |
@@ -72,3 +73,6 @@ code**; the learner builds everything.
   repo's values in `.agents/context/`, or change the skill in `ai-common`, bump the tag in
   `apm.yml` and run `apm install`.
 - Don't start lab containers, clusters or cloud resources unless the learner asks.
+- **Template:** this repo comes from the template named in `.github/template-source`; keep that
+  file. Framework changes belong in the template first. Sync PRs (`scripts/template-sync.sh`)
+  are merged with a merge commit, never squashed (`docs/Template.md`).
