@@ -1,5 +1,6 @@
 {
   "outputStyle": "socratic",
+  "promptSuggestionEnabled": false,
   "permissions": {
     "ask": [
       "Bash(git init *)",
