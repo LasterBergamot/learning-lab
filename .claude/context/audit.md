@@ -11,7 +11,7 @@ holds what the audit covers here.
 
 ## Code explorer
 
-Read: `labs/**` (structure only), `assessments/**`, `.agents/`, `.claude/`, `.gitignore`.
+Read: `labs/**` (structure only), `assessments/**`, `.claude/`, `.gitignore`.
 Hunt for:
 - labs missing one of the README contract sections (including References and the
   `**Status:**` line), or with no `TEARDOWN.md`
@@ -23,14 +23,14 @@ Hunt for:
 
 ## Docs, infra and CI explorer
 
-Read: `docs/`, `README.md`, `AGENTS.md`, `CLAUDE.md`, `.agents/context/`, `scripts/`, `.github/`.
+Read: `docs/`, `README.md`, `CLAUDE.md`, `.claude/context/`, `scripts/`, `.github/`.
 Hunt for:
 - broken relative links, or `[[` wiki-style links
 - track READMEs not linked from the root `README.md`, or missing from `learning.md`
 - stale roadmap-sync blocks (graph classes vs. the labs' Status lines)
 - instructions or scripts that cover only one platform (Omarchy or Windows 11 Git Bash)
 - overdue `Review-Queue.md` rows
-- an `AGENTS.md` over 100 lines
+- a `CLAUDE.md` over 100 lines
 
 ## GitHub state explorer
 
