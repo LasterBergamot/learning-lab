@@ -30,7 +30,7 @@ holds the values.
 
 ## Milestones
 
-- `Repo foundations`: setting up this repo and its tooling (`PLAN.md`).
+- `Repo foundations`: setting up this repo and its tooling.
 - No milestones for learning. The order is expressed by blocked-by relationships and the
   prerequisite graphs in the root and track READMEs, not by dates.
 

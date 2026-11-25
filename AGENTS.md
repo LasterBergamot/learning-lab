@@ -16,7 +16,6 @@ code**; the learner builds everything.
 
 | Working on | Read |
 |------------|------|
-| Continuing the foundations setup (temporary, deleted when done) | `PLAN.md` |
 | Tutoring, lab planning, picking up a track, session logs, review queue, graphs, sources | `.agents/context/learning.md` |
 | Anything under `labs/` | `labs/_template/README.md` (the lab contract), `docs/Platforms.md`, `docs/Isolation.md` |
 | Anything under `assessments/` | `assessments/README.md` |
