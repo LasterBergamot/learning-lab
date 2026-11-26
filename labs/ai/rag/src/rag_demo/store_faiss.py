@@ -2,7 +2,11 @@ import pickle
 
 import faiss
 
-
+# Note for the Break milestone
+# Name one way the index file and the metadata file could end up out of step, so that ID 3 returns the wrong text, with no error at all.
+# Two functions write two separate files from two separate inputs, and nothing checks that they still match.
+# One concrete way: you change something in data/, rebuild one file, and keep the old copy of the other.
+# You'll break it deliberately in the Break milestone, so write this down.
 def build_faiss_index(embeddings, save_path="faiss_index"):
     dimension = embeddings.shape[1]
     print(f"Building FAISS index with dimension: {dimension}")

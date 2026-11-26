@@ -28,8 +28,11 @@ information-retrieval ideas that predate LLMs and will outlive today's tools.
   a prompt that has to keep the model on the retrieved text
 - Embeddings and vector search (`vector-search` in the [AI track](../README.md)): steps 3–4
   of the pipeline are exactly this
-- Gap: neither lab exists yet. Covering embeddings and similarity search inside this lab is fine;
-  note what was skipped in `NOTES.md`.
+- Lexical retrieval (TF-IDF, BM25): the baseline dense search has to beat, and the reason
+  embeddings can miss exact keywords; covered in this lab
+- Gap: neither lab exists yet. Embeddings and FAISS storage were covered inside this lab
+  (steps 1–3); prompting will be covered at the generation step. Note what was skipped in
+  `NOTES.md`.
 
 ## Key concepts
 
@@ -103,5 +106,8 @@ Every online source used for this lab, one line each, official sources first:
 - [all-MiniLM-L6-v2 model card](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) — the embedding model: dimension, input limit, intended use
 - [langchain-text-splitters on PyPI](https://pypi.org/project/langchain-text-splitters/) — the recursive character splitter used for chunking
 - [uv: using uv with PyTorch](https://docs.astral.sh/uv/guides/integration/pytorch/) — CPU-only PyTorch wheels, to keep the venv small on Linux
+- [MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard) — comparing embedding models by task before swapping all-MiniLM-L6-v2
+- [Microsoft Learn: main concepts of a RAG workflow](https://learn.microsoft.com/en-us/training/modules/retrieval-augmented-generation-azure-databricks/2-workflow) — a vendor overview of the pipeline stages
+- [Introduction to Information Retrieval (Manning, Raghavan, Schütze)](https://nlp.stanford.edu/IR-book/) — TF-IDF, BM25, vector-space scoring: the retrieval ideas under RAG
 - [Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (2020)](https://arxiv.org/abs/2005.11401) — the paper that named RAG
 - [7 Steps to Build a Simple RAG System from Scratch (KDnuggets)](https://www.kdnuggets.com/7-steps-to-build-a-simple-rag-system-from-scratch) — the walkthrough this lab follows
