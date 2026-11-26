@@ -16,6 +16,7 @@ code**; the learner builds everything.
 
 | Working on | Read |
 |------------|------|
+| Starting a session: what to work on, continuing or picking up a lab | the `learn` skill; `python3 scripts/lab-status.py` for where things stand |
 | Tutoring, lab planning, picking up a track, session logs, review queue, graphs, sources | `.claude/context/learning.md` |
 | Anything under `labs/` | `labs/_template/README.md` (the lab contract), `docs/Platforms.md`, `docs/Isolation.md` (`.claude/rules/labs.md` loads too) |
 | Anything under `assessments/` | `assessments/README.md` (`.claude/rules/assessments.md` loads too) |
@@ -40,6 +41,10 @@ The output style `.claude/output-styles/socratic.md` is the project default
   ask how it could break. End a topic with "explain it back" in their own words.
 - Be honest about uncertainty and vendor differences; send the learner to the vendor's docs.
 - Keep it short.
+
+Prompt suggestions (the greyed-out next prompt in the input box) are off on purpose
+(`"promptSuggestionEnabled": false`, plus `CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION` under `env`,
+in `.claude/settings.json`): a predicted next step can hand the learner the answer.
 
 ## Always-on rules
 
